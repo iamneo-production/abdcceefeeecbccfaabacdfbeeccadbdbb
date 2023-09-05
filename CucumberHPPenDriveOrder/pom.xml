@@ -10,29 +10,15 @@
 
     <!-- Declare the project's dependencies -->
     <dependencies>
-        <!-- Cucumber Dependencies -->
+        <!-- Import Cucumber-JVM BOM -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>7.1.4</version> <!-- Use the latest version available -->
-            <scope>test</scope>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>7.1.4</version> <!-- Use the desired Cucumber version -->
+            <type>pom</type>
+            <scope>import</scope>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>7.1.4</version> <!-- Use the latest version available -->
-            <scope>test</scope>
-        </dependency>
-        
-        <!-- Add other dependencies as needed for your project -->
     </dependencies>
-    <repositories>
-    <repository>
-        <id>sonatype</id>
-        <url>https://oss.sonatype.org/content/repositories/releases/</url>
-    </repository>
-</repositories>
-
 
     <!-- Maven Compiler Plugin Configuration -->
     <build>
