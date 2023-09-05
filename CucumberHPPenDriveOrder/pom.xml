@@ -11,15 +11,34 @@
 
     <!-- Declare the project's dependencies -->
     <dependencies>
-        <!-- Include the Cucumber-JVM BOM -->
+        <!-- Cucumber Dependencies -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-jvm</artifactId>
+            <artifactId>cucumber-java</artifactId>
             <version>7.1.4</version>
-            <type>pom</type>
-            <scope>import</scope>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>7.1.4</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.1.4</version>
+            <scope>test</scope>
         </dependency>
        
+        <!-- JUnit Dependency -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Add other dependencies as needed for your project -->
     </dependencies>
 
