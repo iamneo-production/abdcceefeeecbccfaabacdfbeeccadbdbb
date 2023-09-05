@@ -26,6 +26,13 @@
         
         <!-- Add other dependencies as needed for your project -->
     </dependencies>
+    <repositories>
+    <repository>
+        <id>sonatype</id>
+        <url>https://oss.sonatype.org/content/repositories/releases/</url>
+    </repository>
+</repositories>
+
 
     <!-- Maven Compiler Plugin Configuration -->
     <build>
