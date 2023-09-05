@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    
+
     <!-- Define your project's details -->
     <groupId>com.example.hp</groupId>
     <artifactId>CucumberHPPenDriveOrder</artifactId>
@@ -10,14 +11,29 @@
 
     <!-- Declare the project's dependencies -->
     <dependencies>
-        <!-- Import Cucumber-JVM BOM -->
+        <!-- Cucumber Dependencies -->
         <dependency>
             <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-jvm</artifactId>
-            <version>7.1.4</version> <!-- Use the desired Cucumber version -->
-            <type>pom</type>
-            <scope>import</scope>
+            <artifactId>cucumber-java</artifactId>
+            <version>6.10.4</version> <!-- Use the desired Cucumber version -->
+            <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>6.10.4</version> <!-- Use the desired Cucumber version -->
+            <scope>test</scope>
+        </dependency>
+
+        <!-- JUnit Dependency -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version> <!-- Use a desired JUnit version -->
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Add other dependencies as needed for your project -->
     </dependencies>
 
     <!-- Maven Compiler Plugin Configuration -->
