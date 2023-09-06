@@ -2,13 +2,21 @@ package yourpackage.stepdefinitions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
 public class OrderPenDriveSteps {
     private WebDriver driver;
 
+    // Constructor or @Before method for WebDriver setup
+    public OrderPenDriveSteps() {
+        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        driver = new ChromeDriver();
+
     @Given("User searches for HP Pen Drive")
     public void userSearchesForHPPenDrive() {
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-        driver = new WebDriver();
+        String setProperty = System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        driver = new ChromeDriver();
         driver.get("https://www.example.com"); // Replace with the actual website URL
         // Implement code to navigate to the website and search for HP Pen Drive.
     }
