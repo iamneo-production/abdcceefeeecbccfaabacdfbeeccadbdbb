@@ -8,7 +8,7 @@ public class OrderPenDriveSteps {
     @Given("User searches for HP Pen Drive")
     public void userSearchesForHPPenDrive() {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-        driver = new ChromeDriver();
+        driver = new WebDriver();
         driver.get("https://www.example.com"); // Replace with the actual website URL
         // Implement code to navigate to the website and search for HP Pen Drive.
     }

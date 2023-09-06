@@ -6,4 +6,6 @@ public interface WebDriver {
 
     WebElement findElement(Object xpath);
 
+    void quit();
+
 }
