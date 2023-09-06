@@ -6,4 +6,8 @@ public class By {
         return null;
     }
 
+    public static Object xpath(String string) {
+        return null;
+    }
+
 }

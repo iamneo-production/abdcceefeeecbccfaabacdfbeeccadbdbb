@@ -1,12 +1,6 @@
-import static org.junit.Assert.assertEquals;
+package yourpackage.stepdefinitions;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
 public class OrderPenDriveSteps {
     private WebDriver driver;
@@ -38,8 +32,12 @@ public class OrderPenDriveSteps {
         // Implement code to verify that the cart displays the correct quantity of pen drives.
         WebElement cartQuantity = driver.findElement(By.id("cart-quantity")); // Replace with actual cart quantity element
         int actualQuantity = Integer.parseInt(cartQuantity.getText());
-        assertEquals(qty, actualQuantity);
+        extracted(qty, actualQuantity);
         
         driver.quit(); // Close the browser after the test
+    }
+
+    private void extracted(int qty, int actualQuantity) {
+        assertEquals(qty, actualQuantity);
     }
 }
