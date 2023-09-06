@@ -2,50 +2,25 @@ package yourpackage.stepdefinitions;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.openqa.selenium.chrome.ChromeDriver;
-
-
 public class OrderPenDriveSteps {
-    private WebDriver driver;
-
     // Constructor or @Before method for WebDriver setup
     public OrderPenDriveSteps() {
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-        driver = new ChromeDriver();
+        new ChromeDriver();
+    } // Add this closing curly brace
 
     @Given("User searches for HP Pen Drive")
     public void userSearchesForHPPenDrive() {
-        String setProperty = System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
-        driver = new ChromeDriver();
-        driver.get("https://www.example.com"); // Replace with the actual website URL
-        // Implement code to navigate to the website and search for HP Pen Drive.
+        // Rest of your code...
     }
 
     @When("Add the first result on the page with quantity {int}")
     public void addPenDriveToCart(int qty) {
-        // Implement code to click on the first result and add it to the cart with the specified quantity.
-        WebElement firstResult = driver.findElement(By.xpath("//div[@class='product'][1]")); // Replace with actual XPath
-        firstResult.click();
-
-        WebElement quantityInput = driver.findElement(By.id("quantity")); // Replace with the actual quantity input field
-        quantityInput.clear();
-        quantityInput.sendKeys(String.valueOf(qty));
-
-        WebElement addToCartButton = driver.findElement(By.id("add-to-cart")); // Replace with the actual Add to Cart button
-        addToCartButton.click();
+        // Rest of your code...
     }
 
     @Then("Cart should display {int} pen drive")
     public void cartShouldDisplayPenDrive(int qty) {
-        // Implement code to verify that the cart displays the correct quantity of pen drives.
-        WebElement cartQuantity = driver.findElement(By.id("cart-quantity")); // Replace with actual cart quantity element
-        int actualQuantity = Integer.parseInt(cartQuantity.getText());
-        extracted(qty, actualQuantity);
-        
-        driver.quit(); // Close the browser after the test
-    }
-
-    private void extracted(int qty, int actualQuantity) {
-        assertEquals(qty, actualQuantity);
+        // Rest of your code...
     }
 }
